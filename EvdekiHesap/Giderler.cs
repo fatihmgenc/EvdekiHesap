@@ -49,68 +49,68 @@ namespace EvdekiHesap
     class TemizlikGideri : Giderler
     {
         string Açıklama = "Temizlik Gideri ";
-        int toplamTemizlikGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamTemizlikGideri.txt"));
+        int toplamTemizlikGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamTemizlikGideri.txt"));
         public override void GiderEkle(int a)
         {
             anaKasa.bakiyeCıkar(a);
             toplamTemizlikGideri += a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamTemizlikGideri.txt", toplamTemizlikGideri.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamTemizlikGideri.txt", toplamTemizlikGideri.ToString());
         }
     }
     class MutfakGideri : Giderler
     {
         string Açıklama = "Mutfak Gideri ";
-        int toplamMutfakGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamMutfakGideri.txt"));
+        int toplamMutfakGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamMutfakGideri.txt"));
         public override void GiderEkle(int a)
         {
             anaKasa.bakiyeCıkar(a);
             toplamMutfakGideri += a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamMutfakGideri.txt", toplamMutfakGideri.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamMutfakGideri.txt", toplamMutfakGideri.ToString());
         }
     }
         class FaturaGideri : Giderler
         {
             string Açıklama = "Fatura Gideri ";
-            int toplamFaturaGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamFaturaGideri.txt"));
+            int toplamFaturaGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamFaturaGideri.txt"));
             public override void GiderEkle(int a)
             {
                 anaKasa.bakiyeCıkar(a);
                 toplamFaturaGideri += a;
-                System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamFaturaGideri.txt", toplamFaturaGideri.ToString());
+                System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamFaturaGideri.txt", toplamFaturaGideri.ToString());
             }
 
         }
         class giyimGideri : Giderler
         {
             string Açıklama = "Giyim Gideri ";
-            int toplamGiyimGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamGiyimGideri.txt"));
+            int toplamGiyimGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamGiyimGideri.txt"));
             public override void GiderEkle(int a)
             {
                 anaKasa.bakiyeCıkar(a);
                 toplamGiyimGideri += a;
-                System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamGiyimGideri.txt", toplamGiyimGideri.ToString());
+                System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamGiyimGideri.txt", toplamGiyimGideri.ToString());
             }
         }
         class KiraGideri : Giderler
         {
             string Açıklama = "Kira Gideri ";
-            int toplamKiraGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamKiraGideri.txt"));
+            int toplamKiraGideri = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamKiraGideri.txt"));
             public override void GiderEkle(int a)
             {
                 anaKasa.bakiyeCıkar(a);
                 toplamKiraGideri += a;
-                System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamKiraGideri.txt", toplamKiraGideri.ToString());
+                System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamKiraGideri.txt", toplamKiraGideri.ToString());
             }
         }
         class DigerGider : Giderler
         {
             string Açıklama = "Diğer Gider ";
-            int toplamDiğerGider = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamDigerGider.txt"));
+            int toplamDiğerGider = Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamDigerGider.txt"));
             public override void GiderEkle(int a)
             {
                 anaKasa.bakiyeCıkar(a);
                 toplamDiğerGider += a;
-                System.IO.File.WriteAllText("D:\\EvdekiHesap\\toplamDigerGider.txt", toplamDiğerGider.ToString());
+                System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\toplamDigerGider.txt", toplamDiğerGider.ToString());
             }
         }
 

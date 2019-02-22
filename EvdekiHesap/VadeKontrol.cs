@@ -12,9 +12,9 @@ namespace EvdekiHesap
         static Object lockObject = new object();
         private static VadeKontrol uniqueVadeKontrol;
         private string LocalAlbarakVadeGünü = System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\AlbarakaVadeGunu.txt");
+            ("D:\\EvdekiHesap\\datatxt\\AlbarakaVadeGunu.txt");
         private string LocalTEBVadeGünü = System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEBVadeGunu.txt");
+            ("D:\\EvdekiHesap\\datatxt\\TEBVadeGunu.txt");
         private IList<IObserver> gözlemciler = new List<IObserver>();
 
 
@@ -45,7 +45,7 @@ namespace EvdekiHesap
             //TextWriter tw = new StreamWriter("VadeGünleri");
             //tw.Write("LAV=" + day); //LocalAlbarakaVade
             //tw.Close();
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\AlbarakaVadeGunu.txt", day);
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\AlbarakaVadeGunu.txt", day);
         }
         public string getLocalTEBVadeGünü()
         {
@@ -58,7 +58,7 @@ namespace EvdekiHesap
             //TextWriter tw = new StreamWriter("VadeGünleri");
             //tw.Write("LTV=" + day); //LocalTEBVade
             //tw.Close();
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\TEBVadeGunu.txt", day);
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\TEBVadeGunu.txt", day);
         }
         public void AboneCık(IObserver a)
         {
@@ -77,7 +77,7 @@ namespace EvdekiHesap
 
                     if (gözlemciler[i].ToString() == "EvdekiHesap.AlbarakaBirikimHesabı")
                     {
-                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\HataDosyasi.txt", "AlbarakayaGirdiniz ");
+                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\HataDosyasi.txt", "AlbarakayaGirdiniz ");
                         gözlemciler[i].update();
                     }
 
@@ -91,7 +91,7 @@ namespace EvdekiHesap
 
                     if (gözlemciler[i].ToString() == "EvdekiHesap.TebBirikimHesabı")
                     {
-                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\HataDosyasi.txt", "TEBE Girdin");
+                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\HataDosyasi.txt", "TEBE Girdin");
                         gözlemciler[i].update();
                     }
 

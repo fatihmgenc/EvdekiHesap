@@ -66,9 +66,9 @@ namespace EvdekiHesap
 
 
             a.Series["Birikim Miktarı"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\TEBBirikimTL.txt")));
+                ("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
+                ("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
+                ("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt")));
                       
                 //a.Series["Birikim Miktarı"].Points[0].Color = Color.Firebrick;
                 //a.Series["Birikim Miktarı"].Points[0].AxisLabel = "TEB Birikimi";
@@ -77,9 +77,9 @@ namespace EvdekiHesap
 
 
                 a.Series["Birikim Miktarı"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt")) + Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\Albaraka_24ayarAltınNakittutarı.txt")) + Convert.ToInt32(System.IO.File.ReadAllText
-                ("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt")));
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt")) + Convert.ToInt32(System.IO.File.ReadAllText
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_24ayarAltınNakittutarı.txt")) + Convert.ToInt32(System.IO.File.ReadAllText
+                ("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt")));
                 //a.Series["Birikim Miktarı"].Points[1].Color = Color.Green;
                 //a.Series["Birikim Miktarı"].Points[1].AxisLabel = "Albaraka Birikimi";
                 a.Series["Birikim Miktarı"].Points[1].LegendText = "Albaraka Birikimi";

@@ -51,11 +51,11 @@ namespace EvdekiHesap
         int _22ayarGramFiyatı = 188;
         int _24ayarGramFiyatı = 205;
         int _22ayarAltınNakittutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt"));
         int _24ayarAltınNakitTutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\Albaraka_24ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\Albaraka_24ayarAltınNakittutarı.txt"));
         int TlNakitTutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt"));
 
         VadeKontrol vadeKontrol = VadeKontrol.getVadeKontrol();
         KumbaraHesap kumbaraHesap = KumbaraHesap.GetKumbaraHesap();
@@ -69,19 +69,19 @@ namespace EvdekiHesap
         public int getTlNakitTutar()
         {
             return Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt"));
         }
         public int getTLAltınTutarı()
         {
             return Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\Albaraka_24ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
+            ("D:\\EvdekiHesap\\datatxt\\Albaraka_24ayarAltınNakittutarı.txt"));
         }
         public void TLNakitEkle(int tutar)
         {
             TlNakitTutarı += tutar;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt", TlNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt", TlNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(tutar);
         }
         public void _22AyarAltınEkle(int altınGramı)
@@ -89,14 +89,14 @@ namespace EvdekiHesap
             _22ayarAltınNakittutarı += altınGramı * _22ayarGramFiyatı;
             kumbaraHesap.ParaEkle(altınGramı * _22ayarGramFiyatı);
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
         }
         public void _22ayarAltınHesabıKatkısı()
         {
             int temp = _22ayarAltınNakittutarı * YüksekFaizAltın._22gramFaizMiktarı / 100;
             _22ayarAltınNakittutarı += temp;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
         }
         public void _24ayarAltınHesabıKatkısı()
@@ -104,7 +104,7 @@ namespace EvdekiHesap
             int temp = _24ayarAltınNakitTutarı * YüksekFaizAltın._22gramFaizMiktarı / 100;
             _24ayarAltınNakitTutarı += temp;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
         }
         public void _24ayarAltınEkle(int altınGramı)
@@ -113,14 +113,14 @@ namespace EvdekiHesap
             _24ayarAltınNakitTutarı += altınGramı * _24ayarGramFiyatı;
             kumbaraHesap.ParaEkle(altınGramı * _24ayarGramFiyatı);
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\Albaraka_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\Albaraka_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
         }
         public void KarPayıUygula()
         {
             int temp = TlNakitTutarı * IslamiUzerinden.yuzdeMiktarı / 100;
             TlNakitTutarı += temp;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt", TlNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt", TlNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
 
 
@@ -140,11 +140,11 @@ namespace EvdekiHesap
         int _22ayarGramFiyatı = 188;
         int _24ayarGramFiyatı = 205;
         int _22ayarAltınNakittutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt"));
         int _24ayarAltınNakitTutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt"));
         int TlNakitTutarı = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEBBirikimTL.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt"));
 
         VadeKontrol vadeKontrol = VadeKontrol.getVadeKontrol();
         KumbaraHesap kumbaraHesap = KumbaraHesap.GetKumbaraHesap();

@@ -10,7 +10,7 @@ namespace EvdekiHesap
     {
         private static AnaKasa anaKasa ;
         private int bakiye = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\AnaKasaBakiyesi.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\AnaKasaBakiyesi.txt"));
         private AnaKasa() { }
         public int getBakiye()
         {
@@ -19,12 +19,12 @@ namespace EvdekiHesap
         public void bakiyeCıkar(int a)
         {
             bakiye -= a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\AnaKasaBakiyesi.txt", bakiye.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\AnaKasaBakiyesi.txt", bakiye.ToString());
         }
         public void bakiyeEkle(int a )
         {
             bakiye += a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\AnaKasaBakiyesi.txt", bakiye.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\AnaKasaBakiyesi.txt", bakiye.ToString());
         }
         public static AnaKasa GetAnaKasa()
         {
@@ -39,7 +39,7 @@ namespace EvdekiHesap
     { 
         private static KumbaraHesap kumbaraHesap;
         private int para = Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt"));
         private KumbaraHesap() { }
         public int getKumbara()
         {
