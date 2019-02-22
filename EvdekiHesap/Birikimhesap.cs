@@ -158,13 +158,13 @@ namespace EvdekiHesap
         public int getTlNakitTutar()
         {
             return Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEBBirikimTL.txt")); 
+            ("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt")); 
         }
         public int getTLAltınTutarı()
         {
             return Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
-            ("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt"));
+            ("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt"))+ Convert.ToInt32(System.IO.File.ReadAllText
+            ("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt"));
         }
         public void TLNakitEkle(int tutar)
         {

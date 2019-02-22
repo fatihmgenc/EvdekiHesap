@@ -110,7 +110,7 @@ namespace EvdekiHesap
             label8.Text = Convert.ToString(albarakaBirikim.getTlNakitTutar() +
             " TL nakit " + albarakaBirikim.getTLAltınTutarı() +
             " TL degerinde altın");
-            label3.Text = System.IO.File.ReadAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt");
+            label3.Text = System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt");
 
 
         }
@@ -198,11 +198,11 @@ namespace EvdekiHesap
         private void button4_Click(object sender, EventArgs e)
         {
 
-                System.IO.File.WriteAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt",
-                Convert.ToString(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt")) - (
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\Albaraka_22ayarAltınNakittutarı.txt")) +
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\Albaraka_24ayarAltınNakittutarı.txt")) +
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\AlbarakaBirikimTL.txt")))
+                System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt",
+                Convert.ToString(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt")) - (
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\Albaraka_22ayarAltınNakittutarı.txt")) +
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\Albaraka_24ayarAltınNakittutarı.txt")) +
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt")))
                 ));
 
                 StreamWriter _22 = new StreamWriter(@"D:\EvdekiHesap\Albaraka_22ayarAltınNakittutarı.txt");
@@ -229,26 +229,26 @@ namespace EvdekiHesap
         private void button5_Click(object sender, EventArgs e)
         {
 
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt",
-                Convert.ToString(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt")) - (
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt")) +
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt")) +
-                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\TEBBirikimTL.txt")))
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt",
+                Convert.ToString(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt")) - (
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt")) +
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt")) +
+                Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt")))
                 ));
 
-            StreamWriter _22 = new StreamWriter(@"D:\EvdekiHesap\TEB_22ayarAltınNakittutarı.txt");
+            StreamWriter _22 = new StreamWriter(@"D:\EvdekiHesap\datatxt\TEB_22ayarAltınNakittutarı.txt");
                 int a = 0;
 
                 _22.WriteLine(a);
                 _22.Close();
 
 
-                StreamWriter _24 = new StreamWriter(@"D:\EvdekiHesap\TEB_24ayarAltınNakittutarı.txt");
+                StreamWriter _24 = new StreamWriter(@"D:\EvdekiHesap\datatxt\TEB_24ayarAltınNakittutarı.txt");
 
                 _24.WriteLine(a);
                 _24.Close();
 
-                StreamWriter nakit = new StreamWriter(@"D:\EvdekiHesap\TEBBirikimTL.txt");
+                StreamWriter nakit = new StreamWriter(@"D:\EvdekiHesap\datatxt\TEBBirikimTL.txt");
 
                 nakit.WriteLine(a);
                 nakit.Close();

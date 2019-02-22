@@ -52,7 +52,7 @@ namespace EvdekiHesap
         {
 
             listBox1.Items.Clear();
-            StreamReader oku = new StreamReader(@"D:\EvdekiHesap\Harcamalar.txt");
+            StreamReader oku = new StreamReader(@"D:\EvdekiHesap\datatxt\Harcamalar.txt");
             string metin = oku.ReadLine();
 
             while(metin != null)
@@ -102,7 +102,7 @@ namespace EvdekiHesap
 
         private void button6_Click(object sender, EventArgs e)
         {
-            StreamWriter harcamalar = new StreamWriter(@"D:\EvdekiHesap\Harcamalar.txt");
+            StreamWriter harcamalar = new StreamWriter(@"D:\EvdekiHesap\datatxt\Harcamalar.txt");
             string a = " ";
 
             harcamalar.WriteLine(a);

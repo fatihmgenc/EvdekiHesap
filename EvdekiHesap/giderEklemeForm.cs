@@ -76,13 +76,13 @@ namespace EvdekiHesap
                     if (comboBox2.Text == "Nakit")
                     {
                         NakitDekarötör yenigider = new NakitDekarötör(mutfakGideri);
-                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\NakitGiderTutar.txt",textBox1.Text);
+                        System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\NakitGiderTutar.txt", textBox1.Text);
                         
                     }
                     else if (comboBox2.Text == "Kredi Kartı")
                      {
                     KartDekarötör yenigider = new KartDekarötör(mutfakGideri);
-                    System.IO.File.WriteAllText("D:\\EvdekiHesap\\KrediGiderTutar.txt",textBox1.Text);
+                    System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\KrediGiderTutar.txt", textBox1.Text);
                 }
 
                     dosyayaYaz(mutfakGideri.getAçıklama() + " " + textBox1.Text);

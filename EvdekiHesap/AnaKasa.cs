@@ -48,13 +48,13 @@ namespace EvdekiHesap
         public void ParaEkle(int a)
         {
             para += a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt",para.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt", para.ToString());
 
         }
         public void ParaÇıkar(int a)
         {
             para -= a;
-            System.IO.File.WriteAllText("D:\\EvdekiHesap\\KumbaraHesapBakiye.txt", para.ToString());
+            System.IO.File.WriteAllText("D:\\EvdekiHesap\\datatxt\\KumbaraHesapBakiye.txt", para.ToString());
         }
         public static KumbaraHesap GetKumbaraHesap()
         {

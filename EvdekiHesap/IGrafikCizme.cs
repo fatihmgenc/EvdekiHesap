@@ -18,38 +18,38 @@ namespace EvdekiHesap
         {
 
             
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamMutfakGideri.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamMutfakGideri.txt")));
             a.Series["Dağılım1"].Points[0].Color = Color.Red;
             a.Series["Dağılım1"].Points[0].AxisLabel = "Mutfak";
             a.Series["Dağılım1"].Points[0].LegendText = "Mutfak";
             a.Series["Dağılım1"].Points[0].Label = "Mutfak"  ;
 
 
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamFaturaGideri.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamFaturaGideri.txt")));
             a.Series["Dağılım1"].Points[1].Color = Color.Green;
             a.Series["Dağılım1"].Points[1].AxisLabel = "Faturalar";
             a.Series["Dağılım1"].Points[1].LegendText = "Faturalar";
             a.Series["Dağılım1"].Points[1].Label = "Faturalar";
 
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamGiyimGideri.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamGiyimGideri.txt")));
             a.Series["Dağılım1"].Points[2].Color = Color.Blue;
             a.Series["Dağılım1"].Points[2].AxisLabel = "Giyim";
             a.Series["Dağılım1"].Points[2].LegendText = "Giyim";
             a.Series["Dağılım1"].Points[2].Label = "Giyim";
 
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamKiraGideri.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamKiraGideri.txt")));
             a.Series["Dağılım1"].Points[3].Color = Color.Brown;
             a.Series["Dağılım1"].Points[3].AxisLabel = "Kira";
             a.Series["Dağılım1"].Points[3].LegendText = "Kira";
             a.Series["Dağılım1"].Points[3].Label = "Kira";
 
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamTemizlikGideri.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamTemizlikGideri.txt")));
             a.Series["Dağılım1"].Points[4].Color = Color.Yellow;
             a.Series["Dağılım1"].Points[4].AxisLabel = "Temizlik";
             a.Series["Dağılım1"].Points[4].LegendText = "Temizlik";
             a.Series["Dağılım1"].Points[4].Label = "Temizlik";
 
-            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\toplamDigerGider.txt")));
+            a.Series["Dağılım1"].Points.Add(Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\toplamDigerGider.txt")));
             a.Series["Dağılım1"].Points[5].Color = Color.Pink;
             a.Series["Dağılım1"].Points[5].AxisLabel = "Diğer";
             a.Series["Dağılım1"].Points[5].LegendText = "Diğer";
