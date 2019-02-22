@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3CA8787-017C-48C5-90DC-CE450FC7296E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EvdekiHesap</RootNamespace>
+    <AssemblyName>EvdekiHesap</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnaKasa.cs" />
+    <Compile Include="AnaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaForm.Designer.cs">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giderEklemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giderEklemeForm.Designer.cs">
+      <DependentUpon>giderEklemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Giderler.cs" />
+    <Compile Include="Birikimhesap.cs" />
+    <Compile Include="giriş.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giriş.Designer.cs">
+      <DependentUpon>giriş.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IGrafikCizme.cs" />
+    <Compile Include="Iobserver.cs" />
+    <Compile Include="Istatistic.cs" />
+    <Compile Include="Istatistikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Istatistikler.Designer.cs">
+      <DependentUpon>Istatistikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KumbaraHesapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KumbaraHesapForm.Designer.cs">
+      <DependentUpon>KumbaraHesapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VadeKontrol.cs" />
+    <EmbeddedResource Include="AnaForm.resx">
+      <DependentUpon>AnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giderEklemeForm.resx">
+      <DependentUpon>giderEklemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giriş.resx">
+      <DependentUpon>giriş.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Istatistikler.resx">
+      <DependentUpon>Istatistikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KumbaraHesapForm.resx">
+      <DependentUpon>KumbaraHesapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kat-elik-elektronik-kasa-ile-dijital-tu-tak-m-kilidi-4-6L-Mini-kilitlenebilir-tak-saklama.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ahsap-bank-kumbara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ragazza-shopping-dipendenza-copia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-photo-259027-1392x928.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard_new_logo_yatay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15139-NQ17BQ.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27784-NWVL3R.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15139-NQ17BQ1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Varios-12-150ppp-01.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-money-bag-clip-art-money-purse-cliparts-5a88e70ec7ce65.8330590315189214868184.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teb-worldcard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\albaraka.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\turk-ekonomi-bankası-credit-card-turkiye-İş-bankası-bank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1475519629_teb_-_turkiye_ekonomi_bankasi-1-copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-invoice-receipt-scalable-vector-gra-5be2a26f145453.6694389515415793750833.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigstock-Bill-and-calculator-46192948.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s-0c1cb27953ffc74b3e5450ac734d557cf5fe10af.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28-mart-2018-altin-fiyatlari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\give-money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert-coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cashier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\goods.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
