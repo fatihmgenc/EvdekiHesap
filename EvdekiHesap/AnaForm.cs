@@ -50,7 +50,7 @@ namespace EvdekiHesap
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            label4.Text = anaKasa.getBakiye().ToString() + " TL";
             listBox1.Items.Clear();
             StreamReader oku = new StreamReader(@"D:\EvdekiHesap\datatxt\Harcamalar.txt");
             string metin = oku.ReadLine();

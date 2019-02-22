@@ -171,7 +171,7 @@ namespace EvdekiHesap
 
             TlNakitTutarı += tutar;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\TEBBirikimTL.txt", TlNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt", TlNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(tutar);
         }
         public void KarPayıUygula()
@@ -179,7 +179,7 @@ namespace EvdekiHesap
             int temp = TlNakitTutarı * faizUzerinden.yuzdeMiktar / 100 ;
             TlNakitTutarı += temp ;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\TEBBirikimTL.txt", TlNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\TEBBirikimTL.txt", TlNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
 
         }
@@ -188,7 +188,7 @@ namespace EvdekiHesap
          
             _22ayarAltınNakittutarı += altınGramı * _22ayarGramFiyatı;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
             kumbaraHesap.ParaEkle(altınGramı * _22ayarGramFiyatı);
         }
         public void _22ayarAltınHesabıKatkısı()
@@ -196,7 +196,7 @@ namespace EvdekiHesap
             int temp = _22ayarAltınNakittutarı * düsükFaizAltın._22gramFaizMiktarı/100;
             _22ayarAltınNakittutarı += temp;
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\TEB_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\TEB_22ayarAltınNakittutarı.txt", _22ayarAltınNakittutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
         }
         public void _24ayarAltınEkle(int altınGramı)
@@ -205,14 +205,14 @@ namespace EvdekiHesap
             _24ayarAltınNakitTutarı += altınGramı * _24ayarGramFiyatı;
             kumbaraHesap.ParaEkle(altınGramı * _24ayarGramFiyatı);
             System.IO.File.WriteAllText
-                ("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
+                ("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
         }
         public void _24ayarAltınHesabıKatkısı()
         {
             int temp = _24ayarAltınNakitTutarı * düsükFaizAltın._24gramFaizMiktarı;
             _24ayarAltınNakitTutarı += temp;
             System.IO.File.WriteAllText
-            ("D:\\EvdekiHesap\\TEB_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
+            ("D:\\EvdekiHesap\\datatxt\\TEB_24ayarAltınNakittutarı.txt", _24ayarAltınNakitTutarı.ToString());
             kumbaraHesap.ParaEkle(temp);
         }
         void IObserver.update()

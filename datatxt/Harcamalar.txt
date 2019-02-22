@@ -4,3 +4,8 @@ Giyim Gideri (kart) 200
 Temizlik gideri detarjan ( Nakit )  35
 Mutfak gideri Et ( Kart )  100
 Diğer giderler Sinema ( Kart )  30
+Kira gideri aidat ( Nakit )  160
+Diğer giderler sinema ( Nakit )  30
+Temizlik gideri Omo ( Nakit )  28
+Mutfak gideri su ( Nakit )  8
+Diğer giderler Hediye ( Nakit )  190

@@ -16,7 +16,7 @@ namespace EvdekiHesap
         public  void dosyayaYaz(string a)
         {
 
-            StreamWriter sw = new StreamWriter(@"D:\EvdekiHesap\Harcamalar.txt", true);
+            StreamWriter sw = new StreamWriter(@"D:\EvdekiHesap\datatxt\Harcamalar.txt", true);
 
             sw.WriteLine(a);
             sw.Close();

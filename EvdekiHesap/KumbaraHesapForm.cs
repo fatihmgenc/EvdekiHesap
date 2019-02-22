@@ -205,19 +205,19 @@ namespace EvdekiHesap
                 Convert.ToInt32(System.IO.File.ReadAllText("D:\\EvdekiHesap\\datatxt\\AlbarakaBirikimTL.txt")))
                 ));
 
-                StreamWriter _22 = new StreamWriter(@"D:\EvdekiHesap\Albaraka_22ayarAltınNakittutarı.txt");
+                StreamWriter _22 = new StreamWriter(@"D:\EvdekiHesap\datatxt\Albaraka_22ayarAltınNakittutarı.txt");
                 int a = 0;
                 
                 _22.WriteLine(a);
                 _22.Close();
                
 
-                StreamWriter _24 = new StreamWriter(@"D:\EvdekiHesap\Albaraka_24ayarAltınNakittutarı.txt");
+                StreamWriter _24 = new StreamWriter(@"D:\EvdekiHesap\datatxt\Albaraka_24ayarAltınNakittutarı.txt");
 
                 _24.WriteLine(a);
                 _24.Close();
 
-                StreamWriter nakit = new StreamWriter(@"D:\EvdekiHesap\AlbarakaBirikimTL.txt");
+                StreamWriter nakit = new StreamWriter(@"D:\EvdekiHesap\datatxt\AlbarakaBirikimTL.txt");
 
                 nakit.WriteLine(a);
                 nakit.Close();
